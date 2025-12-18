@@ -33,7 +33,7 @@ The server will start and host the frontend at the specified address (see output
 
 4. Usage
 --------
-Open your web browser and navigate to the address provided by the Sunflower server (typically http://localhost:8080 or similar). You will see the basic Spotify clone interface. Note: This is a frontend-only application; no backend or music streaming functionality is provided.
+Open your web browser and navigate to the address provided by the Sunflower server (typically http://localhost:8000 or similar). You will see the basic Spotify clone interface. Note: This is a frontend-only application; no backend or music streaming functionality is provided.
 
 5. File Structure
 -----------------
