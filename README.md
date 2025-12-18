@@ -50,4 +50,5 @@ This project is free software; you can redistribute it and/or modify it under th
 
 7. Authors
 ----------
-Written and maintained by the contributors to this repository.
+Shrehan Raj Singh
+Creator of the [Sunflower Programming Language](https://github.com/shrehanrajsingh/sunflower-cpp)
