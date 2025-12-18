@@ -1,0 +1,56 @@
+##
+    Sunflower is a programming language
+    that envelopes features, architecture
+    and ideas from many programming
+    languages.
+    
+    It is a way of scripting/programming
+    that makes the user feel close to 
+    the language while the language
+    continues to stay close to the system.
+    
+    Below is a simple implementation of 
+    a server in Sunflower, all done natively.
+
+    As of December 18, 2025 17:36PM, this
+    example may not work on windows since
+    the server backend of the language is 
+    implemented in POSIX, but that will be
+    changed in the coming days to a more
+    cross-platform setting.
+
+    Sunflower itself ships with two forms
+    of standard library: One implemented 
+    in C++, supporting a functional paradigm,
+    while another Sunflower layer gives the
+    first library an object oriented skeleton.
+
+    The following program uses the second standard
+    library, which internally calls routines from
+    the native library.
+##
+
+import 'socket' as socket # imports lib/socket/_init.sf
+import 'file' as file # imports lib/file/_init.sf
+
+a = socket.Server ('localhost', 8000)
+
+##
+    As of now, routine triggers for
+    routes do not accept an equivalent
+    `request` parameter.
+    This will change in future releases
+##
+fun home ()
+    a = file ('home.html', 'r')
+    r = a.read ()
+    a.close ()
+
+    return {
+        'status': 200,
+        'Content-Type': 'text/html',
+        'body': r
+    }
+
+a.add_get ('/', home)
+a.serve ()
